@@ -28,9 +28,11 @@ En la mecánica "Misión" se esta desarrollando en una versión prematura del pr
 Cada Mob tiene animaciones distintas, al igual que cada uno de los 3 main characters que van a ser posibles de elegir:
 
 <div class = "example-div">
+
 <img src = "ASSETS/Monsters_Creatures_Fantasy/characters.png" class = "example-div-image" alt = "Esto deberia mostrar la img de : 
 [ASSETS/Monsters_Creatures_Fantasy/
 characters.png]">
+
 </div>
 
 <style>
