@@ -1,0 +1,40 @@
+# Binaries
+*.out
+
+# Complied objects
+*.o
+*.obj
+
+# Build folders
+build/
+bin/
+
+# Visual Studio
+.vs/
+*.vcxproj.user
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# Assets temporales
+temp/
+cache/
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+
+# Debug
+Debug/
+Release/
+
+# Linux/macOS
+*.so
+*.dylib
+
+# SFML copied libs
+lib/
