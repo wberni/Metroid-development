@@ -88,21 +88,3 @@ necesites modificarlo para compilarlo bien.
 </div>
 
 
-<style>
-    .text {
-        letter-spacing: 2px;
-        line-height: 1.6em;
-    }
-    .inline-block code {
-        background: #000080 !important;
-        color: #fff;
-        font-weight: 600;
-        letter-spacing: 1.5px;
-    }
-    .selected {
-        color: #FFB347;
-    }
-    .selected-option {
-        color: #00C896;
-    }
-</style>
