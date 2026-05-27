@@ -7,7 +7,7 @@ Todo esto debería hacerlo en ingles pero no tengo ganas.
 Este es un repo en el cuál estoy desarrollando "Metroid" (tampoco me maté con el nombre).
 
 Metroid es un videojuego de estilo, valga la redundancia, *Metroidvania* desarrollado en 
-***C++ / SFML***
+***C++ / SFML 3.1.0***
 
 <div class = "example-div">
 <img alt = "Acá deberia de apareser la imagen de caballero" class = "example-div-image" src = "ASSETS/charactersSprites/Medieval Warrior Pack 3/Preview.gif"
