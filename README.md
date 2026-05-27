@@ -13,14 +13,21 @@ Metroid es un videojuego de estilo, valga la redundancia, *Metroidvania* desarro
 <img alt = "Acá deberia de apareser la imagen de caballero" class = "example-div-image" src = "ASSETS/charactersSprites/Medieval Warrior Pack 3/Preview.gif"
 </div>
 
-Es un RPG con una modalidad de misiones. Se elige a un personaje dentro de una selección de 3: 
+---
+
+Es un RPG con una modalidad de misiones.
+Se elige a un personaje dentro de una selección de 3:
+ 
 Un caballero/dos (porque no me decidi cual meter aún), y probablemente un hechicero Y un clérigo (el departamento de diseño gráfico consiguió bocetos pero no busco ningún sprite real por internet).
 
-Todo el juego está diseñado para ser keyboard-only, asi q no me rompan con la combatibilidad para mouse pq sino no llego más a ponerle un backend a este mutante.
+Todo el juego está diseñado para ser **keyboard-only**, asi q no me rompan con la combatibilidad para mouse pq sino no llego más a ponerle un backend a este mutante.
 
-La mecanica Básica que se esta desarrollando es un menú bastante amigable el cual nos deja seleccionar 2 opciones:
+La mecanica Básica que se esta desarrollando es un menú bastante amigable el cual nos deja seleccionar ***2 opciones***:
+
     1. **Realizar Misión**
-    2. **Creación de personaje** (deberia ser selección, disputas pendientes con el departamento de diseño gráfico).
+    2. **Creación de personaje**
+
+(deberia ser selección, disputas pendientes con el departamento de diseño gráfico).
 
 Adjunto imagen de muestra:
 
