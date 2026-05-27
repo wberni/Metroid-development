@@ -9,6 +9,8 @@ Este es un repo en el cuál estoy desarrollando "Metroid" (tampoco me maté con 
 Metroid es un videojuego de estilo, valga la redundancia, *Metroidvania* desarrollado en 
 ***C++ /SFML***
 
+![Alt text](ASSETS/charactersSprites//Preview.gif)
+
 Es un RPG con una modalidad de misiones. Se elige a un personaje dentro de una selección de 3: 
 Un caballero/dos (porque no me decidi cual meter aún), y probablemente un hechicero Y un clérigo (el departamento de diseño gráfico consiguió bocetos pero no busco ningún sprite real por internet).
 
