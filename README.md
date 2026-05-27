@@ -24,7 +24,10 @@ Adjunto imagen de muestra:
 <img alt = "Acá deberia de apareser la imagen de [ASSETS/menuSprites/Mission.png]" class = "example-div-image" src = "ASSETS/menuSprites/Mission.png">
 </div>
 
-En la mecánica "Misión" se esta desarrollando en una versión prematura del proyecto, una misión que suceda en diferentes escenarios de forma aleatoria. Escenarios en los cuáles nuestro personaje se encontrará, también aleatoriamente, con distintos mobs (goblins, esqueletos guerreros -warrior skeletons u hongos malvados -baddie mushrooms).
+En la mecánica "Misión" se esta desarrollando en una versión prematura del proyecto, una misión que suceda en diferentes escenarios de forma aleatoria.
+
+Escenarios en los cuáles nuestro personaje se encontrará, también aleatoriamente, con distintos mobs (goblins, esqueletos guerreros -warrior skeletons u hongos malvados -baddie mushrooms).
+
 Cada Mob tiene animaciones distintas, al igual que cada uno de los 3 main characters que van a ser posibles de elegir:
 
 <div class = "example-div">
@@ -32,21 +35,7 @@ Cada Mob tiene animaciones distintas, al igual que cada uno de los 3 main charac
 <img src = "ASSETS/charactersSprites/Monsters_Creatures_Fantasy/characters.png" class = "example-div-image" alt = "Esto deberia mostrar la img de : 
 [ASSETS/Monsters_Creatures_Fantasy/
 characters.png]">
-
 </div>
-
-
-<style>
-    .example-div {
-        height: 180px;
-        width: 300px;
-    }
-    .example-div-image {
-        width: 100%;
-        height: 100%;
-    }
-
-</style>
 
 Cuando se entra a una misión, el usuario puede elegir lo que pase según los eventos internos del juego:
 1. Si *Aparece un Mob*, se podrá decidir enfrentarlo como no hacerlo, volviendo por donde se vino y respawneando en el menú.
