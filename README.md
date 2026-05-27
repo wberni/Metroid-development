@@ -29,7 +29,7 @@ Cada Mob tiene animaciones distintas, al igual que cada uno de los 3 main charac
 
 <div class = "example-div">
 
-<img src = "ASSETS/characterSprites/Monsters_Creatures_Fantasy/characters.png" class = "example-div-image" alt = "Esto deberia mostrar la img de : 
+<img src = "ASSETS/charactersSprites/Monsters_Creatures_Fantasy/characters.png" class = "example-div-image" alt = "Esto deberia mostrar la img de : 
 [ASSETS/Monsters_Creatures_Fantasy/
 characters.png]">
 
