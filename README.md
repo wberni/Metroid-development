@@ -21,7 +21,8 @@ Se elige a un personaje dentro de una selección de 3:
 - Un caballero/dos (porque no me decidi cual meter aún)
 - Un clérigo 
 - Y alguno más que veremos sobre la marcha 
-    -(el departamento de diseño gráfico consiguió bocetos pero no busco ningún sprite real por internet).
+
+-(el departamento de diseño gráfico consiguió bocetos pero no busco ningún sprite real por internet).
 
 Todo el juego está diseñado para ser **keyboard-only**, asi q no me rompan con la combatibilidad para mouse pq sino no llego más a ponerle un backend a este mutante.
 
