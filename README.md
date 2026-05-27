@@ -24,6 +24,8 @@ Se elige a un personaje dentro de una selección de 3:
 
 *(el departamento de diseño gráfico consiguió bocetos pero no busco ningún sprite real por internet).*
 
+---
+
 Todo el juego está diseñado para ser **keyboard-only**, asi q no me rompan con la combatibilidad para mouse pq sino no llego más a ponerle un backend a este mutante.
 
 La mecanica Básica que se esta desarrollando es un menú bastante amigable el cual nos deja seleccionar ***2 opciones***:
