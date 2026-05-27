@@ -88,8 +88,8 @@ Cuando se entra a una misión, el usuario puede elegir lo que pase según los ev
 1. Buen dia y toma agua.
 2. El MAKEFILE esta diseñado para ser compilado con MSYS2 o Git Bash, asi q si usas CMD probablemente
 necesites modificarlo para compilarlo bien.
-3. Si queres hechar un vistazo muy rapido a la forma que va tomando esto, ejecuta el archivo 
-<span class = "inline-block">`try.exe`</span> que se encuentra dentro de **/build**.
+3. Si queres hechar un vistazo muy rapido a la forma que va tomando esto, compila el archivo 
+<span class = "inline-block">`try.cpp`</span> que se encuentra dentro de **/sandbox**.
 
 </div>
 
