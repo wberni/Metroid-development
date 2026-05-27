@@ -3,7 +3,7 @@
 #include <optional>
 #include <iostream>
 
-enum class backgroundState
+enum class BackgroundState
 {
     SHOW_MISSION_BACKGROUND,
     SHOW_CREATE_CHARACTER_BACKGROUND
@@ -11,87 +11,76 @@ enum class backgroundState
 
 int main() {
     sf::RenderWindow window(sf::VideoMode({800, 600}), "Metroid");
-    backgroundState backgroundState;
+
+    // background actual 
+    BackgroundState currentBackground = BackgroundState::SHOW_MISSION_BACKGROUND;
+
+    
     sf::Music audio;
-    try
-    {
-        audio.openFromFile("ASSETS/Music/Crimewave.mp3");
+    if(!audio.openFromFile("ASSETS/Music/Crimewave.mp3")) {
+        std::cerr << "NO SE PUDO ABRIR EL ARCHIVO\n";
+    } else {
+        audio.play();
     }
-    catch(const std::exception& e)
-    {
-        std::cerr << "NO SE PUDO ABRIR EL ARCHIVO: " << e.what() << '\n';
+
+    // Textura y sprite de Misión
+    sf::Texture textureMenu_mission;
+    if(!textureMenu_mission.loadFromFile("ASSETS/menuSprites/missionBackground.png")) {
+        std::cerr << "Error al cargar missionBackground.png\n";
     }
-    audio.play();
+    sf::Sprite spriteMenu_mission(textureMenu_mission);
 
-//-------
+   
+    sf::Vector2u windowSize = window.getSize();
+    sf::Vector2u textureSize_mission = textureMenu_mission.getSize();
+    spriteMenu_mission.setScale(
+        static_cast<float>(windowSize.x) / textureSize_mission.x,
+        static_cast<float>(windowSize.y) / textureSize_mission.y
+    );
 
-sf::Texture textureMenu_mission;
-if(!textureMenu_mission.loadFromFile("ASSETS/menuSprites/characterCreation.png")) {
-    std::cerr << "an error ocurred while loading file";
-}
-sf::Sprite spraitMenu_mission(textureMenu_mission);
+    
+    sf::Texture textureMenu_character;
+    if(!textureMenu_character.loadFromFile("ASSETS/menuSprites/characterCreation.png")) {
+        std::cerr << "Error al cargar characterCreation.png\n";
+    }
+    sf::Sprite spriteMenu_character(textureMenu_character);
 
-sf::Vector2u windowSize_mission = window.getSize();
-sf::Vector2u textureSize_mission = textureMenu_mission.getSize();
-float ScaleX_mission = static_cast<float>(windowSize_mission.x) / textureSize_mission.x;
-float ScaleY_mission = static_cast<float>(windowSize_mission.y) / textureSize_mission.y;
+    sf::Vector2u textureSize_character = textureMenu_character.getSize();
+    spriteMenu_character.setScale(
+        static_cast<float>(windowSize.x) / textureSize_character.x,
+        static_cast<float>(windowSize.y) / textureSize_character.y
+    );
 
-spraitMenu_mission.setScale(sf::Vector2f{ScaleX_mission, ScaleY_mission});
-
-//-------
-sf::Texture textureMenu_character;
-if(!textureMenu_character.loadFromFile("ASSETS/menuSprites/characterCreation.png")) {
-    std::cerr << "an error ocurred while loading file";
-}
-sf::Sprite spraitMenu_character(textureMenu_character);
-
-sf::Vector2u windowSize_character = window.getSize();
-sf::Vector2u textureSize_character = textureMenu_character.getSize();
-float ScaleX_character = static_cast<float>(windowSize_character.x) / textureSize_character.x;
-float ScaleY_character = static_cast<float>(windowSize_character.y) / textureSize_character.y;
-
-spraitMenu_character.setScale(sf::Vector2f{ScaleX_character, ScaleY_character});
-
-
-//-------
-
-while(window.isOpen()) {
-    while(const std::optional event = window.pollEvent()) {
-        if(event->is<sf::Event::Closed>()) {
-            window.close();
-        }
-        if (const sf::Event::KeyPressed *KeyPressed = event->getIf<sf::Event::KeyPressed>())
-        {
-            // TRUE --> asifna dirección mem. de donde se guardo toda la info del teclazo al puntero Keypressed
-            // FALSE --> asigna al puntero KeyPressed nullptr porque no fue de tipo Event::Keypressed (false)
-            // Si el resultado del if == false, salta el bloque, de lo contrarario, lo ejecuta.
-            if (KeyPressed->code == sf::Keyboard::Key::M) // because of "Misión" menu option
-            {
-                backgroundState = backgroundState::SHOW_MISSION_BACKGROUND;
+    // Loop principal
+    while(window.isOpen()) {
+        // Eventos
+        while(const std::optional<sf::Event> event = window.pollEvent()) {
+            if(event->is<sf::Event::Closed>()) {
+                window.close();
             }
 
-            if (KeyPressed->code == sf::Keyboard::Key::C) // because of "Crear Personaje" menu option
-            {
-                backgroundState = backgroundState::SHOW_CREATE_CHARACTER_BACKGROUND;
+            if(const sf::Event::KeyPressed* keyPressed = event->getIf<sf::Event::KeyPressed>()) {
+                if(keyPressed->code == sf::Keyboard::M) {
+                    currentBackground = BackgroundState::SHOW_MISSION_BACKGROUND;
+                }
+                if(keyPressed->code == sf::Keyboard::C) {
+                    currentBackground = BackgroundState::SHOW_CREATE_CHARACTER_BACKGROUND;
+                }
             }
         }
-    }
-        switch (backgroundState) {
-            case backgroundState::SHOW_MISSION_BACKGROUND: {
-                window.draw(spraitMenu_mission);
+
+       
+        window.clear();
+        switch (currentBackground) {
+            case BackgroundState::SHOW_MISSION_BACKGROUND:
+                window.draw(spriteMenu_mission);
                 break;
-            }
-
-            case backgroundState::SHOW_CREATE_CHARACTER_BACKGROUND: {
-                window.draw(spraitMenu_character);
+            case BackgroundState::SHOW_CREATE_CHARACTER_BACKGROUND:
+                window.draw(spriteMenu_character);
                 break;
-            }
         }
-    window.clear();
-    window.display();
+        window.display();
+    }
 
+    return 0;
 }
-
-return 0;
-}
-
