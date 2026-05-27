@@ -1,4 +1,4 @@
-# README, Tareas y requerimientos del desarrollo de 'Metroid' 🎲🎴
+# Desarrollo de 'Metroid' 🎲🎴
 ---
 <div class = "text">
 
