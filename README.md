@@ -35,6 +35,7 @@ characters.png]">
 
 </div>
 
+
 <style>
     .example-div {
         height: 180px;
@@ -44,6 +45,7 @@ characters.png]">
         width: 100%;
         height: 100%;
     }
+
 </style>
 
 Cuando se entra a una misión, el usuario puede elegir lo que pase según los eventos internos del juego:
